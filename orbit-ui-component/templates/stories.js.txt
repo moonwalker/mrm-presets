@@ -1,0 +1,20 @@
+import React from 'react';
+import { storiesOf } from '@storybook/react';
+
+import withInfo from '../../stories/decorators/info';
+import <%= componentName %> from './component';
+
+const stories = storiesOf('UI/<%= componentName %>', module);
+
+const STORY_INFO = {
+  text: 'Application specific <%= componentName %> component.',
+  dependency: {
+    slug: '<%= typeName %>/<%= componentName %>',
+    // eslint-disable-next-line no-underscore-dangle
+    component: <%= componentName %>.__baseComponent
+  }
+};
+
+stories.add('default', withInfo(STORY_INFO)(() => (
+  <<%= componentName %> />
+)));

@@ -1,0 +1,33 @@
+import React from 'react';
+import cx from 'classnames';
+import PropTypes from 'prop-types';
+import { <%= componentName %> as UI<%= componentName %> } from '@moonwalker/orbit-ui-react';
+
+import style from './style.styl';
+
+const <%= componentName %> = ({ className, ...restProps }) => (
+  <UI<%= componentName%>
+    className={cx(style.root, className)}
+    {...restProps}
+  />
+);
+
+<%= componentName %>.defaultProps = {
+  ...UI<%= componentName %>.defaultProps,
+  className: ''
+};
+
+<%= componentName %>.propTypes = {
+  ...UI<%= componentName %>.propTypes,
+
+  /** Adopted child class name */
+  className: PropTypes.string
+};
+
+// eslint-disable-next-line no-underscore-dangle
+<%= componentName %>.__baseComponent = {
+  ...UI<%= componentName %>,
+  displayName: 'OrbitUI<%= componentName %>'
+};
+
+export default <%= componentName %>;

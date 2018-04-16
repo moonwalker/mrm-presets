@@ -1,0 +1,29 @@
+import React from 'react';
+import PropTypes from 'prop-types';
+import cx from 'classnames';
+
+import style from './style.styl';
+
+const <%= componentName %> = (props) => {
+  const {
+    className,
+    ...restProps
+  } = props;
+
+  return (
+    <div className={cx(style.root, className)}>
+      <%= componentName %>
+    </div>
+  );
+};
+
+<%= componentName %>.defaultProps = {
+  className: ''
+};
+
+<%= componentName %>.propTypes = {
+  /** Adopted child class name */
+  className: PropTypes.string,
+};
+
+export default <%= componentName %>;

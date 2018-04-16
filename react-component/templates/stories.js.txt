@@ -1,0 +1,10 @@
+import React from 'react';
+import { storiesOf } from '@storybook/react';
+
+import <%= componentName %> from './component';
+
+const stories = storiesOf('<%= storyPrefix %>/<%= componentName %>', module);
+
+stories.add('default', () => (
+  <<%= componentName %> />
+));

@@ -1,0 +1,7 @@
+/* stylelint-disable */
+:global {
+  @import 'orbit-ui/<%= type %>/<%= slug %>';
+}
+/* stylelint-enable */
+
+.root {}
