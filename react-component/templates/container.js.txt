@@ -1,0 +1,21 @@
+import { Component } from 'react';
+
+export const <%= componentName %>Container = BaseComponent => props =>
+  class <%= componentName %>Enhanced extends Component {
+    contructor(props) {
+      super(props);
+
+      this.state = {
+
+      };
+    }
+
+    render() {
+      return (
+        <BaseComponent
+          {...this.props}
+          {...this.state}
+        />
+      )
+    }
+  };

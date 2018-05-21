@@ -1,3 +1,5 @@
-import <%= componentName %> from './component';
+<% if (container) { %>import { <%= componentName %>Container } from './<%= componentSlug %>.container';
+import { <%= componentName %> as <%= componentName %>Component } from './<%= componentSlug %>.component';
 
-export default <%= componentName %>;
+export const <%= componentName %> = <%= componentName %>Container(<%= componentName %>Component);
+<% } else { %>export { <%= componentName %> } from './<%= componentSlug %>.component';<%}%>
