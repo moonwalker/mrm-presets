@@ -1,4 +1,7 @@
-# Mrm presets for :moon: :walking:
+# [mrm](https://github.com/sapegin/mrm) presets for :moon: :walking:
+
+[![](https://img.shields.io/npm/v/@moonwalker/mrm-presets.svg)](https://www.npmjs.com/package/@moonwalker/mrm-presets)
+![](https://badges.renovateapi.com/github/moonwalker/mrm-presets)
 
 ## Install
 
@@ -16,7 +19,9 @@ npm i -g @moonwalker/mrm-presets
 - `react-component` - generate React component folder
 - `orbit-ui-component` - generat Orbit UI React component folder
 
-## Usage
+## Examples
+
+### Generate react component folder
 
 ```shell
 mrm react-component --preset @moonwalker/mrm-presets --config:slug top-navigation --config:prefix components/signup
