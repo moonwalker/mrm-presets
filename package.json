@@ -17,7 +17,7 @@
   "dependencies": {
     "lodash": "4.17.5",
     "mrm-core": "3.3.3",
-    "pluralize": "7.0.0"
+    "pluralize": "8.0.0"
   },
   "devDependencies": {
     "eslint": "6.2.1",
