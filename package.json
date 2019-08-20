@@ -1,7 +1,7 @@
 {
-  "name": "@moonwalker/mrm-preset-react",
-  "version": "2.0.1",
-  "description": "Mrm preset for Moonwalkers",
+  "name": "@moonwalker/mrm-presets",
+  "version": "1.0.0",
+  "description": "Mrm preset for moonwalkers",
   "main": "index.js",
   "scripts": {
     "pretest": "npm run lint",
@@ -9,7 +9,8 @@
     "lint": "eslint . --cache --fix"
   },
   "keywords": [
-    "mrm"
+    "generator",
+    "mrm-preset"
   ],
   "author": "Vio <vio@moonwalker.tech>",
   "license": "MIT",
