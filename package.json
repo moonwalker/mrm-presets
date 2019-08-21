@@ -23,7 +23,7 @@
     "release-it": "^12.3.5"
   },
   "devDependencies": {
-    "dotenv": "^8.1.0",
+    "dotenv": "8.1.0",
     "eslint": "6.2.1",
     "eslint-config-airbnb-base": "14.0.0",
     "eslint-plugin-import": "2.18.2"
