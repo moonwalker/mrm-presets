@@ -1,7 +1,8 @@
 const { copyFiles, install, packageJson } = require('mrm-core');
 
 const task = () => {
-  install(['release-it'], { dev: false, exact: true });
+  install(['release-it'], { dev: true, exact: true });
+  install(['@release-it/conventional-changelog'], { dev: true, exact: true });
   install(['dotenv'], { dev: true, exact: true });
 
   copyFiles(__dirname, [
