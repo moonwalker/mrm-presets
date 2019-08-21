@@ -37,7 +37,7 @@ workflows:
               ignore: /.*/
       - publish:
           requires:
-            - build
+            - code-checkout
           filters:
             tags:
               only: /^v.*/
