@@ -13,11 +13,11 @@ const task = () => {
     'scripts/release.sh',
   ]);
 
-  // Update package.json
-  const pkg = packageJson();
-
-  pkg.setScript('bump', './scripts/bump.sh');
-  pkg.setScript('release', './scripts/release.sh');
+  // Update scripts
+  packageJson()
+    .setScript('bump', './scripts/bump.sh')
+    .setScript('release', './scripts/release.sh')
+    .save();
 };
 
 task.description = 'Generate release-it configuration';
