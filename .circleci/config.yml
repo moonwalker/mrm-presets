@@ -20,7 +20,19 @@ jobs:
       - attach_workspace:
           at: ~/repo
       - add_ssh_keys
-      - run: ./scripts/pre-deploy.sh
+      - run: >-
+          # Github
+          mkdir -p ~/.ssh
+          ssh-keyscan -H github.com >> ~/.ssh/known_hosts
+
+          cat >> ~/.ssh/config << EOF
+          StrictHostKeyChecking no
+          EOF
+
+          # NPM
+          echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > ~/repo/.npmrc
+
+
       - deploy:
           command: npm run release
 
