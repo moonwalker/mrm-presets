@@ -6,7 +6,9 @@
   "scripts": {
     "pretest": "npm run lint",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "eslint . --cache --fix"
+    "lint": "eslint . --cache --fix",
+    "bump": "./scripts/bump.sh",
+    "release": "./scripts/release.sh"
   },
   "keywords": [
     "generator",
@@ -17,9 +19,11 @@
   "dependencies": {
     "lodash": "4.17.15",
     "mrm-core": "3.3.3",
-    "pluralize": "8.0.0"
+    "pluralize": "8.0.0",
+    "release-it": "^12.3.5"
   },
   "devDependencies": {
+    "dotenv": "^8.1.0",
     "eslint": "6.2.1",
     "eslint-config-airbnb-base": "14.0.0",
     "eslint-plugin-import": "2.18.2"
