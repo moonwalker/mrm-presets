@@ -7,9 +7,9 @@ module.exports = merge({}, config, {
     push: false,
     tag: false,
     requireCleanWorkingDir: false,
-    requireUpstream: false,
+    requireUpstream: false
   },
   npm: {
-    publish: true,
-  },
+    publish: true
+  }
 });

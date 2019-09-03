@@ -1,6 +1,4 @@
-const {
-  copyFiles, install, lines, packageJson,
-} = require('mrm-core');
+const { copyFiles, install, lines, packageJson } = require('mrm-core');
 
 const task = () => {
   install(['release-it'], { dev: true, exact: true });
@@ -13,7 +11,7 @@ const task = () => {
     'config/release-it/branch.js',
     'config/release-it/release.js',
     'scripts/bump.sh',
-    'scripts/release.sh',
+    'scripts/release.sh'
   ]);
 
   // Update scripts
@@ -23,16 +21,24 @@ const task = () => {
     .save();
 
   // Add .env and GITHUB_TOKEN
-  lines('.gitignore').remove('.env').add('.env').save();
+  lines('.gitignore')
+    .remove('.env')
+    .add('.env')
+    .save();
 
   // add to .npmignore only if the file exists
   const npmIgnoreFile = lines('.npmignore');
 
   if (npmIgnoreFile.exists()) {
-    npmIgnoreFile.remove('.env').set(['.env']).save();
+    npmIgnoreFile
+      .remove('.env')
+      .set(['.env'])
+      .save();
   }
 
-  lines('.env').add(['# GITHUB_TOKEN=']).save();
+  lines('.env')
+    .add(['# GITHUB_TOKEN='])
+    .save();
 };
 
 task.description = 'Generate release-it configuration';

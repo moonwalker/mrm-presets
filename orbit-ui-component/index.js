@@ -12,42 +12,47 @@ const generateFile = (base, options) => {
   const compiled = template(fs.readFileSync(templatePath));
 
   lines(path.join(dir, base))
-    .add(compiled({
-      slug,
-      type,
-      componentName: upperFirst(camelCase(slug)),
-      typeName: upperFirst(camelCase(type)),
-    }))
+    .add(
+      compiled({
+        slug,
+        type,
+        componentName: upperFirst(camelCase(slug)),
+        typeName: upperFirst(camelCase(type))
+      })
+    )
     .save();
 };
 
 const task = (config) => {
-  const { src, slug, type } = config.defaults({ src: 'src' }).require('slug', 'type').values();
+  const { src, slug, type } = config
+    .defaults({ src: 'src' })
+    .require('slug', 'type')
+    .values();
 
   const componentDir = path.join(src, 'ui', slug);
 
   generateFile('index.js', {
     dir: componentDir,
     slug,
-    type,
+    type
   });
 
   generateFile('component.js', {
     dir: componentDir,
     slug,
-    type,
+    type
   });
 
   generateFile('stories.js', {
     dir: componentDir,
     slug,
-    type,
+    type
   });
 
   generateFile('style.styl', {
     dir: componentDir,
     slug,
-    type,
+    type
   });
 };
 
