@@ -6,12 +6,7 @@ const { camelCase, upperFirst, template } = require('lodash');
 const TEMPLATE_DIR = path.join(__dirname, 'templates');
 
 const generateFile = (filename, options) => {
-  const {
-    dir,
-    slug,
-    prefix,
-    container,
-  } = options;
+  const { dir, slug, prefix, container } = options;
 
   const templatePath = path.join(TEMPLATE_DIR, `${filename}.txt`);
   const compiled = template(fs.readFileSync(templatePath));
@@ -19,27 +14,30 @@ const generateFile = (filename, options) => {
   const outputFilename = options.outputFilename || filename;
 
   lines(path.join(dir, outputFilename))
-    .add(compiled({
-      componentName: upperFirst(camelCase(slug)),
-      componentSlug: slug,
-      storyPrefix: prefix.split('/').map(i => upperFirst(camelCase(i))).join('/'),
-      container,
-    }))
+    .add(
+      compiled({
+        componentName: upperFirst(camelCase(slug)),
+        componentSlug: slug,
+        storyPrefix: prefix
+          .split('/')
+          .map((i) => upperFirst(camelCase(i)))
+          .join('/'),
+        container
+      })
+    )
     .save();
 };
 
 const task = (mrmConfig) => {
   const defaultConfig = {
     cwd: process.cwd(),
-    container: false,
+    container: false
   };
 
-  const {
-    cwd,
-    slug,
-    prefix,
-    container,
-  } = mrmConfig.defaults(defaultConfig).require('slug', 'prefix').values();
+  const { cwd, slug, prefix, container } = mrmConfig
+    .defaults(defaultConfig)
+    .require('slug', 'prefix')
+    .values();
 
   const componentDir = path.join(cwd, prefix, slug);
 
@@ -47,7 +45,7 @@ const task = (mrmConfig) => {
     dir: componentDir,
     slug,
     prefix,
-    container,
+    container
   });
 
   generateFile('component.js', {
@@ -55,7 +53,7 @@ const task = (mrmConfig) => {
     outputFilename: `${slug}.component.js`,
     slug,
     prefix,
-    container,
+    container
   });
 
   generateFile('stories.js', {
@@ -63,7 +61,7 @@ const task = (mrmConfig) => {
     outputFilename: `${slug}.stories.js`,
     slug,
     prefix,
-    container,
+    container
   });
 
   if (container) {
@@ -72,7 +70,7 @@ const task = (mrmConfig) => {
       outputFilename: `${slug}.container.js`,
       slug,
       prefix,
-      container,
+      container
     });
   }
 
@@ -81,7 +79,7 @@ const task = (mrmConfig) => {
     outputFilename: `${slug}.styl`,
     slug,
     prefix,
-    container,
+    container
   });
 };
 
