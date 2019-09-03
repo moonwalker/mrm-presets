@@ -19,6 +19,7 @@ npm i -g @moonwalker/mrm-presets
 - `react-component` - generate React component folder
 - `orbit-ui-component` - generat Orbit UI React component folder
 - `release-it` - opinionated [release-it](https://github.com/release-it/release-it) configuration
+- `pre-flight-check` - add linting & formatting configs for [@moonwalker/pre-flight-check](https://github.com/moonwalker/pre-flight-check)
 
 ## Examples
 
