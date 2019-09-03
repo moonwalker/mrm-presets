@@ -5,6 +5,7 @@ const task = () => {
   install(['@moonwalker/pre-flight-check'], { dev: true, exact: true });
 
   copyFiles(path.join(__dirname, 'configs'), [
+    '.eslintignore',
     '.huskyrc.js',
     '.eslintrc.js',
     'prettier.config.js',
@@ -15,6 +16,7 @@ const task = () => {
   // Update scripts
   packageJson()
     .setScript('format', 'prettier --write "**/*.{js,jsx}"')
+    .setScript('lint', 'eslint . --ext js,jsx')
     .save();
 };
 
