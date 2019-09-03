@@ -6,8 +6,9 @@ const task = () => {
 
   copyFiles(path.join(__dirname, 'configs'), [
     '.eslintignore',
-    '.huskyrc.js',
     '.eslintrc.js',
+    '.huskyrc.js',
+    '.prettierignore',
     'prettier.config.js',
     'stylelint.config.js',
     'lint-staged.config.js'
