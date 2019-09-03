@@ -11,7 +11,7 @@ module.exports = merge({}, config, {
   },
   plugins: {
     '@release-it/conventional-changelog': {
-      preset: 'eslint'
+      preset: 'angular'
     }
   }
 });
