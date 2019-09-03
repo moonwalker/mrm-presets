@@ -68,6 +68,7 @@ npm run bump
   - on a branch, a new beta tag will be generated
 
   The version can be manually set by choosing the custom version option.
+
 2. the commit will be tagged
 3. a Github release will be generated (`GITHUB_TOKEN` required)
 4. code will be pushed
