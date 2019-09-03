@@ -6,9 +6,10 @@
   "scripts": {
     "pretest": "npm run lint",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "eslint . --cache --fix",
+    "lint": "eslint .",
     "bump": "./scripts/bump.sh",
-    "release": "./scripts/release.sh"
+    "release": "./scripts/release.sh",
+    "format": "prettier --write \"**/*.{js,jsx}\""
   },
   "keywords": [
     "generator",
@@ -22,11 +23,9 @@
     "pluralize": "8.0.0"
   },
   "devDependencies": {
+    "@moonwalker/pre-flight-check": "^1.0.2",
     "@release-it/conventional-changelog": "1.1.0",
     "dotenv": "8.1.0",
-    "eslint": "6.3.0",
-    "eslint-config-airbnb-base": "14.0.0",
-    "eslint-plugin-import": "2.18.2",
     "release-it": "12.3.6"
   }
 }
