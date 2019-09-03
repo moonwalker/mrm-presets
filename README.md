@@ -63,16 +63,20 @@ npm run bump
 ```
 
 ### How is working
-1. the package version will be updated
+
+When running `bump` command, `release-it` will do the following steps locally:
+
+1. set a new package version
   - on master, a new semver version will be inferred based on [Angular conventional changelog format](https://github.com/conventional-changelog/conventional-changelog/blob/master/packages/conventional-changelog-angular/README.md)
   - on a branch, a new beta tag will be generated
 
   The version can be manually set by choosing the custom version option.
 
-2. the commit will be tagged
-3. a Github release will be generated (`GITHUB_TOKEN` required)
-4. code will be pushed
-5. CI will publish the package
+2. tag the commit
+3. push the code & tags
+4. create a Github release(`GITHUB_TOKEN` required)
+
+CI will run the publish flow for tagged commits.
 
 ## pre-flight-check
 
