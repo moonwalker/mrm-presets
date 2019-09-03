@@ -16,14 +16,14 @@ npm i -g @moonwalker/mrm-presets
 
 ## Presets
 
-- `react-component` - generate React component folder
-- `orbit-ui-component` - generat Orbit UI React component folder
-- `release-it` - opinionated [release-it](https://github.com/release-it/release-it) configuration
-- `pre-flight-check` - add linting & formatting configs for [@moonwalker/pre-flight-check](https://github.com/moonwalker/pre-flight-check)
+- [`react-component`](#react-component)
+- `orbit-ui-component`
+- [`release-it`](#release-it)
+- [`pre-flight-check`](#pre-flight-check)
 
-## Examples
+## react-component
 
-### Generate react component folder
+Generate React component folder
 
 ```shell
 mrm react-component --preset @moonwalker/mrm-presets --config:slug top-navigation --config:prefix components/signup
@@ -47,3 +47,37 @@ mrm react-component --preset @moonwalker/mrm-presets --config:slug top-navigatio
 // Create src/components/signup/top-navigation/top-navigation.stories.js
 // Create src/components/signup/top-navigation/top-navigations.styl
 ```
+
+## release-it
+
+Custom release flow based on [release-it](https://github.com/release-it/release-it).
+
+Usage:
+```shell
+yarn bump
+```
+
+or
+```shell
+npm run bump
+```
+
+### How is working
+1. the package version will be updated
+  - on master, a new semver version will be inferred based on [Angular conventional changelog format](https://github.com/conventional-changelog/conventional-changelog/blob/master/packages/conventional-changelog-angular/README.md)
+  - on a branch, a new beta tag will be generated
+
+  The version can be manually set by choosing the custom version option.
+2. the commit will be tagged
+3. a Github release will be generated (`GITHUB_TOKEN` required)
+4. code will be pushed
+5. CI will publish the package
+
+## pre-flight-check
+
+Add linting & formatting configs for [@moonwalker/pre-flight-check](https://github.com/moonwalker/pre-flight-check)
+
+#### How is working
+[lint-staged](https://www.npmjs.com/package/lint-staged) is running [Prettier](https://www.npmjs.com/package/prettier) and [Eslint](https://www.npmjs.com/package/eslint) before commit. If there are eslint errors, the commit will stop.
+
+To skip the check entirely, you can use `git commit --no-verify`.
