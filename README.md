@@ -1,7 +1,7 @@
 # [mrm](https://github.com/sapegin/mrm) presets for :moon: :walking:
 
 [![](https://img.shields.io/npm/v/@moonwalker/mrm-presets.svg)](https://www.npmjs.com/package/@moonwalker/mrm-presets)
-![](https://badges.renovateapi.com/github/moonwalker/mrm-presets)
+[![](https://badges.renovateapi.com/github/moonwalker/mrm-presets)](https://app.renovatebot.com/dashboard#github/relative-ci/bundle-stats)
 
 ## Install
 

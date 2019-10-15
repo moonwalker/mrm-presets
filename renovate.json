@@ -1,5 +1,9 @@
 {
-  "extends": [
-    "config:base"
-  ]
+  "extends": ["config:base"],
+  "timezone": "CET",
+  "schedule": ["after 1am and before 6am"],
+  "prHourlyLimit": 20,
+  "baseBranches": ["update-dependencies"],
+  "automerge": true,
+  "semanticCommits": true
 }
