@@ -19,13 +19,13 @@
   "license": "MIT",
   "dependencies": {
     "lodash": "4.17.15",
-    "mrm-core": "4.0.2",
+    "mrm-core": "4.0.3",
     "pluralize": "8.0.0"
   },
   "devDependencies": {
-    "@moonwalker/pre-flight-check": "1.0.22",
+    "@moonwalker/pre-flight-check": "1.0.23",
     "@release-it/conventional-changelog": "1.1.0",
     "dotenv": "8.2.0",
-    "release-it": "12.6.1"
+    "release-it": "13.5.1"
   }
 }
