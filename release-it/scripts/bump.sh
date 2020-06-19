@@ -15,4 +15,4 @@ RELEASE_ARGS="${PRERELEASE_ARG} ${@}"
 
 echo "Running release-it with '${RELEASE_ARGS}'."
 
-./node_modules/.bin/release-it $RELEASE_ARGS
+./node_modules/.bin/release-it --disable-metrics $RELEASE_ARGS

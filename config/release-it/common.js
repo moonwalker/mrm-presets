@@ -19,5 +19,6 @@ module.exports = {
     release: false,
     preRelease: false,
     tokenRef: 'GITHUB_TOKEN'
-  }
+  },
+  hooks: {}
 };
