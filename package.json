@@ -18,7 +18,7 @@
   "author": "Vio <vio@moonwalker.tech>",
   "license": "MIT",
   "dependencies": {
-    "lodash": "4.17.15",
+    "lodash": "4.17.19",
     "mrm-core": "4.1.1",
     "pluralize": "8.0.0"
   },
