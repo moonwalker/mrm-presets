@@ -23,9 +23,9 @@
     "pluralize": "8.0.0"
   },
   "devDependencies": {
-    "@moonwalker/pre-flight-check": "1.0.28",
+    "@moonwalker/pre-flight-check": "1.0.30",
     "@release-it/conventional-changelog": "1.1.4",
     "dotenv": "8.2.0",
-    "release-it": "13.6.2"
+    "release-it": "13.6.6"
   }
 }
