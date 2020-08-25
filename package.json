@@ -26,6 +26,6 @@
     "@moonwalker/pre-flight-check": "1.0.32",
     "@release-it/conventional-changelog": "1.1.4",
     "dotenv": "8.2.0",
-    "release-it": "13.6.6"
+    "release-it": "13.6.9"
   }
 }
