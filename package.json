@@ -18,14 +18,14 @@
   "author": "Vio <vio@moonwalker.tech>",
   "license": "MIT",
   "dependencies": {
-    "lodash": "4.17.19",
-    "mrm-core": "4.1.1",
+    "lodash": "4.17.20",
+    "mrm-core": "4.1.2",
     "pluralize": "8.0.0"
   },
   "devDependencies": {
-    "@moonwalker/pre-flight-check": "1.0.30",
+    "@moonwalker/pre-flight-check": "1.0.32",
     "@release-it/conventional-changelog": "1.1.4",
     "dotenv": "8.2.0",
-    "release-it": "13.6.6"
+    "release-it": "13.6.9"
   }
 }
