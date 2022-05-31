@@ -24,7 +24,7 @@
   },
   "devDependencies": {
     "@moonwalker/pre-flight-check": "1.4.0",
-    "@release-it/conventional-changelog": "2.0.1",
+    "@release-it/conventional-changelog": "5.0.0",
     "dotenv": "16.0.1",
     "release-it": "14.14.2"
   }
