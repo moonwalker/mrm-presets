@@ -3,7 +3,7 @@ const config = require('./common');
 module.exports = {
   ...config,
   git: {
-    ...config,
+    ...config.git,
     commit: false,
     push: false,
     tag: false,
@@ -11,7 +11,7 @@ module.exports = {
     requireUpstream: false
   },
   npm: {
-    ...config,
+    ...config.npm,
     publish: true
   }
 };
