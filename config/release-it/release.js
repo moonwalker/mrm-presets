@@ -10,6 +10,11 @@ module.exports = {
     requireCleanWorkingDir: false,
     requireUpstream: false
   },
+  github: {
+    ...config.github,
+    release: true,
+    autoGenerate: true
+  },
   npm: {
     ...config.npm,
     publish: true
