@@ -1,6 +1,6 @@
 {
   "name": "@moonwalker/mrm-presets",
-  "version": "1.3.8",
+  "version": "1.3.9-beta.0",
   "description": "Mrm preset for moonwalkers",
   "main": "index.js",
   "scripts": {
