@@ -19,7 +19,7 @@
   "license": "MIT",
   "dependencies": {
     "lodash": "4.17.21",
-    "mrm-core": "7.0.0",
+    "mrm-core": "7.1.22",
     "pluralize": "8.0.0"
   },
   "devDependencies": {
